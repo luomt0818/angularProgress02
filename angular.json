@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "progress02": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "progress02"
+    }
+  },
+  "defaultProject": "progress02",
+  "cli": {
+    "analytics": "8b7b2dff-25fa-485d-a66a-2b159165138a"
+  }
 }
