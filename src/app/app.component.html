@@ -1,4 +1,4 @@
-<header class="header">
+<!-- <header class="header">
 
 
   <a [routerLink]="[ '/home']" routerLinkActive="active">首页</a>
@@ -8,6 +8,23 @@
 
   <a [routerLink]="[ '/news']" routerLinkActive="active">新闻</a>
 
-</header>
-
-<router-outlet></router-outlet>
+</header> -->
+<div id="container" style="width:100%">
+ 
+  <div id="header" style="background-color:#FFA500;">
+  <h1 style="margin-bottom:0;">标题</h1></div>
+   
+  <div id="menu" style="background-color:cornflowerblue;height:850px;width:10%;float:left;">
+    <br>
+    <a [routerLink]="[ '/login']" routerLinkActive="active">登录</a><br><br><br>
+    <a [routerLink]="[ '/search']" routerLinkActive="active">检索</a><br>
+  </div>
+   
+  <div id="content" style="background-color:white;height:850px;width:90%;float:left;">
+    <router-outlet></router-outlet>
+  </div>
+   
+  <div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+  版权 © runoob.com</div>
+   
+  </div>

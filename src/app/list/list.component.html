@@ -1,0 +1,15 @@
+<h1>一览</h1>
+<div>
+  姓名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;城市&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;爱好
+<div *ngFor="let item of meisaiList;let key=index">
+  {{item.username}}==&nbsp;&nbsp;
+  {{item.sex}}&nbsp;&nbsp;==
+  {{item.city}}==
+  {{item.hobby}}
+  &nbsp;&nbsp;
+  <input type="button" [routerLink]="['/login']" value="修正"> 
+  &nbsp;&nbsp; 
+  <input type="button" (click)="datadel(key)" value="删除">
+</div>
+
+</div>

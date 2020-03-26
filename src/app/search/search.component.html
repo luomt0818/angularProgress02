@@ -1,0 +1,14 @@
+<div>
+<br><br>
+&nbsp;&nbsp;<input type="text" name="username" [(ngModel)]="usernm"/>&nbsp;<input type="button" value="检索" (click)="search()">
+<div *ngFor="let item of allList;let key=index">
+    姓名：{{item.username}}
+    <br>
+    性别：{{item.sex}}
+    <br>
+    城市：{{item.city}}
+    <br>
+    爱好：{{item.hobby}}
+
+</div>
+</div>
