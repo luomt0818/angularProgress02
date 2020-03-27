@@ -7,7 +7,8 @@
   {{item.city}}==
   {{item.hobby}}
   &nbsp;&nbsp;
-  <input type="button" [routerLink]="['/login']" value="修正"> 
+  <!-- <input type="button" [routerLink]="['/login']" value="修正">  -->
+  <input type="button" (click)="update(key)" value="修正"> 
   &nbsp;&nbsp; 
   <input type="button" (click)="datadel(key)" value="删除">
 </div>

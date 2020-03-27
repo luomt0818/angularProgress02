@@ -1,32 +1,35 @@
 <h1>人员登记</h1>
-<div >
-姓名：<input id="username" type="text"  [(ngModel)]="peopleInfo.username"/>
-<br>
-<br>
-性别：
-<input name="sex" id="sex1" type="radio"  value="1" [(ngModel)]="peopleInfo.sex"/>男
-<input name="sex" id="sex2" type="radio"  value="2"  [(ngModel)]="peopleInfo.sex"/>女
-<br>
-<br>
-城市：
-<select name="city" id="city" [(ngModel)]="peopleInfo.city">
-<option [value]="item" *ngFor="let item of peopleInfo.cityList">{{item}}</option>
-</select>
-<br>
-<br>
-爱好：
-<span *ngFor="let item of peopleInfo.hobby;let key=index">
-<input id="username" type="checkbox" [id]="'check'+key"  [(ngModel)]="item.checked"/>{{item.title}}
-</span>
-<br>
-<br>
-特殊备注：
-<textarea name="mark" id="mark" [(ngModel)]="peopleInfo.mark"></textarea>
-<br>
-<br>
-<button (click)="doSubmit()">提交</button>
-
-<pre>
+<form #loginForm="ngForm" (ngSubmit)="doSubmit()">
+  <div>
+    姓名：<input name="username" id="username" type="text" [(ngModel)]="peopleInfo.username" />
+    <br>
+    <br>
+    性别：
+    <input name="sex" id="sex1" type="radio" value="1" [(ngModel)]="peopleInfo.sex" />男
+    <input name="sex" id="sex2" type="radio" value="2" [(ngModel)]="peopleInfo.sex" />女
+    <br>
+    <br>
+    城市：
+    <select name="city" id="city" [(ngModel)]="peopleInfo.city">
+      <option [value]="item" *ngFor="let item of peopleInfo.cityList">{{item}}</option>
+    </select>
+    <br>
+    <br>
+    爱好：
+    <span *ngFor="let item of peopleInfo.hobby;let key=index">
+      <input name="hobby" type="checkbox" [id]="'check'+key" [(ngModel)]="item.checked" />{{item.title}}
+    </span>
+    <br>
+    <br>
+    特殊备注：
+    <textarea name="mark" id="mark" [(ngModel)]="peopleInfo.mark"></textarea>
+    <br>
+    <br>
+    <button type="submit">提交</button>
+  </div>
+</form>
+<div>
+  <pre>
   {{peopleInfo|json}}
 </pre>
 </div>

@@ -10,7 +10,7 @@ export class LoginComponent implements OnInit {
 
   public peopleInfo:any={
 
-    username:'',
+    username:'张三',
     sex:'2',
     cityList:['北京','上海','深圳'],
     city:'北京',
@@ -33,8 +33,17 @@ export class LoginComponent implements OnInit {
   }
 
   doSubmit(){
-    console.log(this.peopleInfo);
-    //alert("登录完了，明细跳转");
-    this.router.navigateByUrl('/list');
+    // console.log(this.peopleInfo);
+    console.log("登录完了，明细跳转");
+    // console.log(this.peopleInfo.username);
+    //第一种传值方式
+    // this.router.navigateByUrl('/list' + '?username='+this.peopleInfo.username+ '?sex='+this.peopleInfo.sex);
+    //第二种传值方式
+    this.router.navigate(['/list'],{queryParams:{username:this.peopleInfo.username,sex:this.peopleInfo.sex}});
+    //第三种传值方式(未成功)
+    // this.router.navigateByUrl('/list',{queryParams:{username:this.peopleInfo.username}});
+
+  
+  
   }
 }
